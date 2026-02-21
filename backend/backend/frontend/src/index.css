@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-medical-50: #f0f7ff;
+  --color-medical-100: #e0effe;
+  --color-medical-200: #bae0fd;
+  --color-medical-300: #7cc8fb;
+  --color-medical-400: #36acf7;
+  --color-medical-500: #0c91e9;
+  --color-medical-600: #0273c7;
+  --color-medical-700: #035ba1;
+  --color-medical-800: #074e85;
+  --color-medical-900: #0c416e;
+  --color-medical-950: #082949;
+
+  --color-status-compliant: #10b981;
+  --color-status-minor: #f59e0b;
+  --color-status-moderate: #f97316;
+  --color-status-severe: #ef4444;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-slate-900 bg-slate-50;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-sm;
+  }
+  
+  .card-medical {
+    @apply bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden;
+  }
+}
